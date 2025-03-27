@@ -39,7 +39,7 @@ mapImage.onload = function() {
 };
 
 function getPath(source, destination) {
-    let key1 = `${source}-${destination}`;
+    const key1 = `${source}-${destination}`;
     //let key2 = `${destination}-${source}`;
     return predefinedPaths[key1] /*|| predefinedPaths[key2] || [];*/
 }
@@ -54,8 +54,8 @@ function drawRoute(source, destination) {
     ctx.beginPath();
 
     waypoints.forEach((point, index) => {
-        let x = (point.x / 1152) * canvas.width;
-        let y = (point.y / 648) * canvas.height;
+        const x = (point.x / 1152) * canvas.width;
+        const y = (point.y / 648) * canvas.height;
 
         if (index === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
