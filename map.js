@@ -40,8 +40,8 @@ mapImage.onload = function() {
 
 function getPath(source, destination) {
     let key1 = `${source}-${destination}`;
-    let key2 = `${destination}-${source}`;
-    return predefinedPaths[key1] || predefinedPaths[key2] || [];
+    //let key2 = `${destination}-${source}`;
+    return predefinedPaths[key1] /*|| predefinedPaths[key2] || [];*/
 }
 
 function drawRoute(source, destination) {
@@ -65,7 +65,7 @@ function drawRoute(source, destination) {
     ctx.lineWidth = 3;
     ctx.stroke();
 }
-window.addEventListener("resize", drawRoute);
+window.addEventListener("resize", drawRoute(source, destination));
 window.onload = drawRoute(source, destination);
 
 function goBack() {
