@@ -66,7 +66,7 @@ function drawRoute(source, destination) {
     ctx.stroke();
 }
 window.addEventListener("resize", drawRoute);
-window.onload = drawRoute;
+window.onload = drawRoute(source, destination);
 
 function goBack() {
     window.location.href = "index.html";
